@@ -207,6 +207,12 @@ a {
   cursor: pointer;
 }
 
+.button > img, .button > .button__label {
+  transition-property: transform, opacity;
+  transition-duration: .15s;
+  transition-timing-function: ease-in-out;
+}
+
 .button:hover > img {
   transform: scale(1.05);
   opacity: .8;
@@ -230,19 +236,18 @@ a {
   margin-bottom: 40px;
 }
 
-.email, .tel {
-  display: block;
+.footer__link {
   color: #1B1C21;
-}
-
-.footer__link:active {
-  padding-bottom: 0;
-  color: #1B1C21;
-  border-color: #1B1C21;
 }
 
 .footer__link:hover {
   padding-bottom: 2px;
+  color: #1B1C21;
+  border-color: #1B1C21;
+}
+
+.footer__link:active {
+  padding-bottom: 0;
   color: #1B1C21;
   border-color: #1B1C21;
 }
@@ -287,8 +292,18 @@ a {
   margin-left: 16px;
 }
 
+
 .logo__link {
   display: flex;
+  transition: opacity .15s ease-in-out;
+}
+
+.logo__link:hover {
+  opacity: 0.8;
+}
+
+.logo__link:active {
+  opacity: unset;
 }
 
 .logo__link > img {
